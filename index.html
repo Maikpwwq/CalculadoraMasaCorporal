@@ -9,27 +9,62 @@
     <script 
         src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-    <script src="./calculadora.js"></script>
+    </script>    
     <title>Calculadora de masa corporal</title>    
 </head>
 <body>
+    <header class="section">
+        <nav  class="navbar navbar-expand-lg navbar-light bg-light sb-navbar">
+            <div class="container">
+                <ul class="navbar-nav mr-auto pt-3 pt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabla2" onclick="tabla(2)">tabla 2</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabla6" onclick="tabla(3)">tabla 3</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabla4" onclick="tabla(4)">tabla 4</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabla5" onclick="tabla(5)">tabla 5</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabla6" onclick="tabla(6)">tabla 6</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabla7" onclick="tabla(7)">tabla 7</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabla8" onclick="tabla(8)">tabla 8</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabla9" onclick="tabla(9)">tabla 9</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabla10" onclick="tabla(10)">tabla 10</a></li>
+                </ul>
+            </div>
+        </nav>        
+
+    </header>
     <main>
         <div class="section">
             <div class="container">
                 <h2>Calculadora de masa corporal</h2>
                 <p>Con base a los datos ingresador su indice de masa corporal es:</p>
+                <label for=""> Registre su peso </label>
+                <input id="peso" type="number" placeholder="Registre su peso en Kg">
+                <label for=""> Ingrese su estatura </label>
+                <input id="estatura" type="number" placeholder="Ingrese su estatura en m">
                 <p id="demo"> IMC </p>
             </div>
-        </div>        
+        </div>    
+        <script type="text/javascript" src="./calculadora.js"></script>
+        <script type="text/javascript">
+            var numero = prompt ('Ingrese un numero para terminar la serie');
+            parImpar (numero); 
+        </script>       
+        <div class="section">
+            <div class="container">
+                <h2> Tabla del </h2>                
+                <label for=""> Esta es la table del </label>
+                <p id="tablaMultiplicar"> Tabla del </p>
+            </div>
+        </div>      
     </main>    
-    <script>
-        let peso = prompt ('Registre su peso en Kg');
-        let estatura = prompt ('Ingrese su estatura en m');
-        var x = indiceMasaCorporal (peso, estatura);        
-        document.getElementById("demo").innerHTML = x;            
-        document.write(x); 
-        //return x;
-    </script>       
+    
 </body>
 </html>
