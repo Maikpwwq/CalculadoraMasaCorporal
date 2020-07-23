@@ -1,7 +1,6 @@
 // Calculadora de indice de masa corporal
 let peso = document.getElementById("peso");
 let estatura = document.getElementById("estatura");
-var x = indiceMasaCorporal (peso, estatura);                  
 function indiceMasaCorporal (peso, estatura) {
     imc = peso/(estatura*estatura);
     if (imc<=15) {        
@@ -30,14 +29,13 @@ function indiceMasaCorporal (peso, estatura) {
     }    
 } 
 // Recorre la serie escogiendo pares e impares 
+let numero = prompt ('Ingrese un numero para terminar la serie');
 function parImpar (numero) {
     for ( i=1; i==numero; i++){
         if (!(i % 2 == 0)){    
-            for ( n=1; n==10; n++){
-                console.log(numero + 'es impar');
-            } 
+            console.log(i + 'es impar'); 
         } else {
-            console.log(numero + 'es par');
+            console.log(i + 'es par');
         }            
     } 
 }
@@ -46,7 +44,7 @@ function tabla (multiplo) {
     console.log('tabla del'+ multiplo);
     if (multiplo>=2 && multiplo<=10){    
         for ( n=1; n==10; n++){
-            document.getElementById("tablaMultiplicar").innerHTML = multiplo*n;              
+            document.getElementById("tablaMultiplicar").innerHTML = toString(multiplo*n);              
         } 
     } else {
         var multiplo = prompt ('Ingrese un numero entre 2 y 10');

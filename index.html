@@ -49,14 +49,10 @@
                 <input id="peso" type="number" placeholder="Registre su peso en Kg">
                 <label for=""> Ingrese su estatura </label>
                 <input id="estatura" type="number" placeholder="Ingrese su estatura en m">
-                <p id="demo"> IMC </p>
+                <button onclick="indiceMasaCorporal (peso, estatura)">Calcular</button>
+                <p id="demo"> IMC </p>            
             </div>
-        </div>    
-        <script type="text/javascript" src="./calculadora.js"></script>
-        <script type="text/javascript">
-            var numero = prompt ('Ingrese un numero para terminar la serie');
-            parImpar (numero); 
-        </script>       
+        </div>                  
         <div class="section">
             <div class="container">
                 <h2> Tabla del </h2>                
@@ -65,6 +61,6 @@
             </div>
         </div>      
     </main>    
-    
+    <script type="text/javascript" src="./calculadora.js"></script>
 </body>
 </html>
