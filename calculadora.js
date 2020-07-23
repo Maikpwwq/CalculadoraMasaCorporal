@@ -40,11 +40,13 @@ function parImpar (numero) {
     } 
 }
 // Escribe un programa que muestre por pantalla una tabla de multiplicar.
+let multiplicacion= [];
 function tabla (multiplo) {
     console.log('tabla del'+ multiplo);
     if (multiplo>=2 && multiplo<=10){    
         for ( n=1; n==10; n++){
-            document.getElementById("tablaMultiplicar").innerHTML = toString(multiplo*n);              
+            multiplicacion[n-1] = multiplo*n;
+            document.getElementById("tablaMultiplicar").innerHTML = toString(multiplicacion);              
         } 
     } else {
         var multiplo = prompt ('Ingrese un numero entre 2 y 10');
