@@ -31,7 +31,7 @@ function indiceMasaCorporal (peso, estatura) {
 // Recorre la serie escogiendo pares e impares 
 let numero = prompt ('Ingrese un numero para terminar la serie');
 function parImpar (numero) {
-    for ( i=1; i==numero; i++){
+    for ( i=1; i<=numero; i++){
         if (!(i % 2 == 0)){    
             console.log(i + 'es impar'); 
         } else {
@@ -39,14 +39,19 @@ function parImpar (numero) {
         }            
     } 
 }
+parImpar (numero);
 // Escribe un programa que muestre por pantalla una tabla de multiplicar.
-let multiplicacion= [];
 function tabla (multiplo) {
+    let multiplicacion= [];
     console.log('tabla del'+ multiplo);
     if (multiplo>=2 && multiplo<=10){    
-        for ( n=1; n==10; n++){
-            multiplicacion[n-1] = multiplo*n;
-            document.getElementById("tablaMultiplicar").innerHTML = toString(multiplicacion);              
+        console.log('hola');
+        
+        for ( let n = 1; n <= 10; n ++){
+            console.log('hola');
+            multiplicacion[n - 1] = multiplo*n;
+            document.getElementById("tablaMultiplicar").innerHTML = multiplicacion[n-1];              
+            console.log(multiplicacion[n-1]);
         } 
     } else {
         var multiplo = prompt ('Ingrese un numero entre 2 y 10');
